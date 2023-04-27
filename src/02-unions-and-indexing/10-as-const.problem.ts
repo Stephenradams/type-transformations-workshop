@@ -11,9 +11,11 @@ export const programModeEnumMap = {
   SELF_DIRECTED: "selfDirected",
   PLANNED_ONE_ON_ONE: "planned1on1",
   PLANNED_SELF_DIRECTED: "plannedSelfDirected",
-};
+} as const;
+//    ^? programModeEnumMap
 
 export type GroupProgram = typeof programModeEnumMap["GROUP"];
+//            ^? GroupProgram
 export type AnnouncementProgram = typeof programModeEnumMap["ANNOUNCEMENT"];
 export type OneOnOneProgram = typeof programModeEnumMap["ONE_ON_ONE"];
 export type SelfDirectedProgram = typeof programModeEnumMap["SELF_DIRECTED"];
